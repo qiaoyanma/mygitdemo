@@ -1,0 +1,15 @@
+1.接受receiver作为参数的情形：
+a. Reflect.get(target,prop,receiver);
+b. Reflect.set(target,prop,value,receiver)
+c. map.forEach(function(value,key,map){
+	this.report(key,value);
+},reporter)
+
+const reporter={
+	report:function(key,value){
+	....
+}
+}
+
+d. 数组的拓展之扩展方法find()/findIndex()
+这两个方法都可以接受第二个参数，用来绑定回调函数里面的this对象
